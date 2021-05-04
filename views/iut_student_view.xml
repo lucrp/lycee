@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="iut_student_tree" model="ir.ui.view">
+            <field name="name">iut.student.tree</field>
+            <field name="model">iut.student</field>
+        </record>
+
+        <record id="iut_student_action" model="ir.actions.act_window">
+            <field name="name">Etudiants</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">iut.student</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
