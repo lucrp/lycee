@@ -7,11 +7,13 @@
     'website': "https://github.com/lucrp/lycee/",
     'category': 'Inventory',
     'description': "Ce module sert à gérer les classes, les étudiants et les professeurs d'un Lycée",
-    'license': 'MIT',
+    'license': 'LGPL-3',
     # data files always loaded at installation
     'data': [
         'views/res_partner_view.xml',
-        #'lycee_menu.xml',
+        'views/iut_student_view.xml',
+        'views/iut_class_view.xml',
+        'lycee_menu.xml',
     ],
     'auto_install': False,
     'installable': True
