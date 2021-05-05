@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-from datetime import date
-
 from odoo import api, fields, models
 
 class Schedule(models.Model):
