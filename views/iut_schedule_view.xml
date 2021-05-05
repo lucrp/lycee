@@ -16,7 +16,7 @@
 
 
         <record id="iut_schedule_action" model="ir.actions.act_window">
-            <field name="name">Etudiants</field>
+            <field name="name">Agenda</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">iut.schedule</field>
             <field name="view_mode">tree</field>

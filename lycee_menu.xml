@@ -1,9 +1,12 @@
 <odoo>
     <!-- menu root-->
     <menuitem name="Lycée" id="menu_lycee_root" sequence="1"/>
+    <!-- Menu Agenda -->
+    <menuitem parent="menu_lycee_root" name="Agenda" id="menu_agenda" action="iut_schedule_action" sequence="2"/>
     <!--  Menu Configuration  -->
-    <menuitem parent="menu_lycee_root" name="Configuration" id="menu_configuration" sequence="2"/>
-    <!--  Config/Etudiants-->
+    <menuitem parent="menu_lycee_root" name="Configuration" id="menu_configuration" sequence="3"/>
+    <menuitem parent="menu_lycee_root" name="TEST" id="menu_test" sequence="4"/>
+    <!--  Config/Options-->
     <menuitem parent="menu_configuration" id="menu_etudiants" name="Etudiants" action="iut_student_action" sequence="1"/>
-    <menuitem parent="menu_configuration" id="menu_class" name="Classes" action="iut_class_action" sequence="1"/>
+    <menuitem parent="menu_configuration" id="menu_class" name="Classes" action="iut_class_action" sequence="2"/>
 </odoo>
