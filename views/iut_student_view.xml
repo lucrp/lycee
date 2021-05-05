@@ -3,6 +3,33 @@
         <record id="iut_student_tree" model="ir.ui.view">
             <field name="name">iut.student.tree</field>
             <field name="model">iut.student</field>
+            <field name="arch" type="xml">
+                <tree string="Etudiants">
+                    <field name="firstname"/>
+                    <field name="lastname"/>
+                    <field name="birthdate"/>
+                    <field name="age"/>
+                    <field name="class_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="iut_student_form" model="ir.ui.view">
+            <field name="name">iut.student.form</field>
+            <field name="model">iut.student</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="firstname"/>
+                            <field name="lastname"/>
+                            <field name="birthdate"/>
+                            <field name="age"/>
+                            <field name="class_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
         </record>
 
         <record id="iut_student_action" model="ir.actions.act_window">
