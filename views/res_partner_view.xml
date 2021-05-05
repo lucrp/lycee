@@ -1,8 +1,39 @@
 <odoo>
-    <record id="res_partner_action_teacher" model="ir.actions.act_window">
-        <field name="name">Professeurs</field>
-        <field name="type">ir.actions.act_window</field>
-        <field name="res_model">res.partner</field>
-        <field name="view_mode">tree,form</field>
-    </record>
+    <data>
+
+        <record model="ir.ui.view" id="view_partner_tree_custom">
+            <field name="name">view.partner.tree.custom</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                    <tree>
+                         <field name="name"/>
+                         <field name="class_ids"/>
+                    </tree>
+            </field>
+        </record>
+
+        <record id="view_res_partner_inherited" model="ir.ui.view">
+            <field name="name">view.res.partner.inherited</field>
+            <field name="priority">1</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@name='contact_addresses']" position="before">
+                    <page string="Classes" name="class" autofocus="autofocus">
+                        <field name="class_ids"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="res_partner_action_teacher" model="ir.actions.act_window">
+            <field name="name">Professeurs</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form</field>
+             <field name="view_ids" eval="[(5, 0, 0),
+              (0, 0, {'view_mode': 'tree', 'view_id': ref('view_partner_tree_custom')})]"
+        />
+        </record>
+    </data>
 </odoo>
