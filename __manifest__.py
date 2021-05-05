@@ -14,6 +14,7 @@
         'views/iut_student_view.xml',
         'views/iut_class_view.xml',
         'views/iut_schedule_view.xml',
+        'views/iut_course_view.xml',
         'lycee_menu.xml',
     ],
     'auto_install': False,
