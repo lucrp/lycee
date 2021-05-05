@@ -9,4 +9,6 @@
     <!--  Config/Options-->
     <menuitem parent="menu_configuration" id="menu_etudiants" name="Etudiants" action="iut_student_action" sequence="1"/>
     <menuitem parent="menu_configuration" id="menu_class" name="Classes" action="iut_class_action" sequence="2"/>
+    <menuitem parent="menu_configuration" id="menu_course" name="Courses" action="iut_course_action" sequence="3"/>
+    <menuitem parent="menu_configuration" id="menu_prof" name="Professeurs" action="res_partner_action_teacher" sequence="4"/>
 </odoo>
