@@ -1,0 +1,34 @@
+<odoo>
+    <data>
+        <record id="iut_course_tree" model="ir.ui.view">
+            <field name="name">iut.course.tree</field>
+            <field name="model">iut.course</field>
+            <field name="arch" type="xml">
+                <tree string="Course">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="iut_course_form" model="ir.ui.view">
+            <field name="name">iut.course.form</field>
+            <field name="model">iut.course</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="iut_course_action" model="ir.actions.act_window">
+            <field name="name">Courses</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">iut.course</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
