@@ -14,12 +14,41 @@
             </field>
         </record>
 
+        <record id="iut_schedule_form" model="ir.ui.view">
+            <field name="name">iut.schedule.form</field>
+            <field name="model">iut.schedule</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="date_start"/>
+                            <field name="date_stop"/>
+                            <field name="room"/>
+                            <field name="class_id"/>
+                            <field name="course_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="iut_schedule_calendar" model="ir.ui.view">
+            <field name="name">iut.schedule.calendar</field>
+            <field name="model">iut.schedule</field>
+            <field name="priority">2</field>
+            <field name="arch" type="xml">
+                <calendar string="Agenda" date_start="date_start" date_stop="date_stop" color="course_id">
+                    <field name="course_id" />
+                    <field name="room" />
+                    <field name="class_id" />
+                </calendar>
+            </field>
+        </record>
 
         <record id="iut_schedule_action" model="ir.actions.act_window">
             <field name="name">Agenda</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">iut.schedule</field>
-            <field name="view_mode">tree</field>
+            <field name="view_mode">tree,form,calendar</field>
         </record>
     </data>
 </odoo>
